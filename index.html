@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Boliche</title>
+</head>
+<body>
+    <h1>Simulador Boliche</h1>
+
+    <h2>Bienvenidos</h2>
+
+    <h3>Precio Entrada</h3>
+    <p>Precio = $9.000</p>
+
+    <h4>Selecciona la cantidad de entradas:</h4>
+    <input type="number" id="cantidad-entradas" min="1">
+
+    <h4>Selecciona una bebida:</h4>
+    <select id="bebida">
+        <option value="0">Cerveza</option>
+        <option value="1">Agua</option>
+        <option value="2">Caipirinia Frutos Rojos</option>
+        <option value="3">Fernet con Coca</option>
+        <option value="4">Vodka con Speed</option>
+        <option value="5">Botella de Fernet</option>
+        <option value="6">Caipirinia Maracuya</option>
+        <option value="7">Capirinia Absolut</option>
+        <option value="8">Caipirinia Smirnoff</option>
+        <option value="9">Caipiroska Absolut con Maracuya</option>
+        <option value="10">CapirosSka Absolut con Frutos Rojos</option>
+        <option value="11">Caipiroska Absolut</option>
+        <option value="12">Caipiroska Smirnoff</option>S
+    </select>
+
+    <h4>Selecciona la cantidad de bebidas:</h4>
+    <input type="number" id="cantidad-bebidas" min="1">
+
+    <button id="calcular">Calcular Total</button>
+
+    <h4 id="resultado-entradas"></h4>
+    <h4 id="resultado-bebidas"></h4>
+    <h4 id="resultado-total"></h4>
+
+    <script src="script.js"></script>
+</body>
+</html>
