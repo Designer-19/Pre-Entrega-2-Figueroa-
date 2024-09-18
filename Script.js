@@ -25,6 +25,11 @@ const bebidas = [
     caipiroskaAbsolutConFrutosRojos, caipiroskaAbsolut, caipiroskaSmirnoff
 ];
 
+// Función para validar el número de la bebida seleccionada
+function validarSeleccion(seleccion, max) {
+    return !isNaN(seleccion) && seleccion > 0 && seleccion <= max;
+}
+
 // Función para filtrar todas las bebidas que son caipis
 function filtrarCaipis() {
     const caipis = bebidas.filter(bebida => bebida.nombre.toLowerCase().includes("caipi") && !bebida.nombre.toLowerCase().includes("caipiroska"));
@@ -63,10 +68,11 @@ function totalEntrada(cantidadEntradas) {
     return cantidadEntradas * precioEntrada;
 }
 
-// Función para calcular el total de bebidas
+// Función para seleccionar bebidas y calcular el total
 function seleccionarBebida() {
     let totalBebidas = 0;
     let continuar = true;
+    let resumenBebidas = "";
 
     while (continuar) {
         let mensajeBebidas = "Selecciona una bebida:\n";
@@ -75,14 +81,18 @@ function seleccionarBebida() {
         });
         
         let seleccion = parseInt(prompt(mensajeBebidas)) - 1;
-        if (bebidas[seleccion]) {
+        if (validarSeleccion(seleccion + 1, bebidas.length)) {
             let cantidad = parseInt(prompt(`¿Cuántas ${bebidas[seleccion].nombre} querés?`)) || 0;
             totalBebidas += bebidas[seleccion].precio * cantidad;
+            resumenBebidas += `${cantidad}x ${bebidas[seleccion].nombre} - $${bebidas[seleccion].precio * cantidad}\n`;
+        } else {
+            alert("Selección no válida.");
         }
 
         continuar = prompt("¿Querés agregar otra bebida? (si/no)").toLowerCase() === "si";
     }
 
+    alert(`Resumen de bebidas seleccionadas:\n${resumenBebidas}`);
     return totalBebidas;
 }
 
