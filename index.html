@@ -14,27 +14,30 @@
     <p>Precio = $9.000</p>
 
     <h4>Selecciona la cantidad de entradas:</h4>
-    <input type="number" id="cantidad-entradas" min="1">
+    <label for="cantidad-entradas">Cantidad de Entradas:</label>
+    <input type="number" id="cantidad-entradas" min="1" required>
 
     <h4>Selecciona una bebida:</h4>
+    <label for="bebida">Bebida:</label>
     <select id="bebida">
         <option value="0">Cerveza</option>
         <option value="1">Agua</option>
-        <option value="2">Caipirinia Frutos Rojos</option>
+        <option value="2">Caipirinha Frutos Rojos</option>
         <option value="3">Fernet con Coca</option>
         <option value="4">Vodka con Speed</option>
         <option value="5">Botella de Fernet</option>
-        <option value="6">Caipirinia Maracuya</option>
-        <option value="7">Capirinia Absolut</option>
-        <option value="8">Caipirinia Smirnoff</option>
+        <option value="6">Caipirinha Maracuya</option>
+        <option value="7">Caipirinha Absolut</option>
+        <option value="8">Caipirinha Smirnoff</option>
         <option value="9">Caipiroska Absolut con Maracuya</option>
-        <option value="10">CapirosSka Absolut con Frutos Rojos</option>
+        <option value="10">Caipiroska Absolut con Frutos Rojos</option>
         <option value="11">Caipiroska Absolut</option>
-        <option value="12">Caipiroska Smirnoff</option>S
+        <option value="12">Caipiroska Smirnoff</option>
     </select>
 
     <h4>Selecciona la cantidad de bebidas:</h4>
-    <input type="number" id="cantidad-bebidas" min="1">
+    <label for="cantidad-bebidas">Cantidad de Bebidas:</label>
+    <input type="number" id="cantidad-bebidas" min="1" required>
 
     <button id="calcular">Calcular Total</button>
 
@@ -45,3 +48,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
