@@ -3,20 +3,28 @@
 // Precio de entrada por persona
 const precioEntrada = 9000;
 
-// Bebidas como objetos individuales
-const cerveza = { nombre: "Cerveza", precio: 7000 };
-const agua = { nombre: "Agua", precio: 3500 };
-const caipiFrutosRojos = { nombre: "Caipi Frutos Rojos", precio: 10000 };
-const caipiMaracuya = { nombre: "Caipi Maracuya", precio: 10000 };
-const caipiAbsolut = { nombre: "Caipi Absolut", precio: 10000 };
-const caipiSmirnoff = { nombre: "Caipi Smirnoff", precio: 10000 };
-const fernetConCoca = { nombre: "Fernet con Coca", precio: 8500 };
-const vodkaConSpeed = { nombre: "Vodka con Speed", precio: 6790 };
-const botellaDeFernet = { nombre: "Botella de Fernet", precio: 90000 };
-const caipiroskaAbsolutConMaracuya = { nombre: "Caipiroska Absolut con Maracuya", precio: 14000 };
-const caipiroskaAbsolutConFrutosRojos = { nombre: "Caipiroska Absolut con Frutos Rojos", precio: 14000 };
-const caipiroskaAbsolut = { nombre: "Caipiroska Absolut", precio: 14000 };
-const caipiroskaSmirnoff = { nombre: "Caipiroska Smirnoff", precio: 14000 };
+// Clase Bebida con constructor
+class Bebida {
+    constructor(nombre, precio) {
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+}
+
+// Crear bebidas usando el constructor de la clase Bebida
+const cerveza = new Bebida("Cerveza", 7000);
+const agua = new Bebida("Agua", 3500);
+const caipiFrutosRojos = new Bebida("Caipi Frutos Rojos", 10000);
+const caipiMaracuya = new Bebida("Caipi Maracuya", 10000);
+const caipiAbsolut = new Bebida("Caipi Absolut", 10000);
+const caipiSmirnoff = new Bebida("Caipi Smirnoff", 10000);
+const fernetConCoca = new Bebida("Fernet con Coca", 8500);
+const vodkaConSpeed = new Bebida("Vodka con Speed", 6790);
+const botellaDeFernet = new Bebida("Botella de Fernet", 90000);
+const caipiroskaAbsolutConMaracuya = new Bebida("Caipiroska Absolut con Maracuya", 14000);
+const caipiroskaAbsolutConFrutosRojos = new Bebida("Caipiroska Absolut con Frutos Rojos", 14000);
+const caipiroskaAbsolut = new Bebida("Caipiroska Absolut", 14000);
+const caipiroskaSmirnoff = new Bebida("Caipiroska Smirnoff", 14000);
 
 // Array con los objetos de bebidas
 const bebidas = [
